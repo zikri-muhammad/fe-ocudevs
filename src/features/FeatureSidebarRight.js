@@ -17,10 +17,10 @@ export default function FeatureSidebarRight() {
 
     return (
         <Sidebar className="w-[108px]">
-            <div className="h-full w-full flex flex-col space-y-8 justify-center items-center">
+            <div className="h-full w-full flex flex-col space-y-12 justify-center items-center">
                 {
                     menu.map((item, index) => (
-                        <ButtonIcon click={() => setPointer(item.key)} key={index} icon={item.icon} active={pointer == item.key} className="bg-secondary-more-lighter w-10 h-10" />
+                        <ButtonIcon click={() => setPointer(item.key)} key={index} icon={item.icon} active={pointer == item.key} className="bg-secondary-more-lighter !p-2.5 !w-10 !h-10" />
                     ))
                 }
             </div>

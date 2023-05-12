@@ -37,9 +37,15 @@ export default function UserLayout({ children }) {
   } else if (status == "authenticated") {
     return (
       <div className="h-screen w-full flex relative">
-        <FeatureSidebarLeft />
-        <div className="h-full flex-grow overflow-y-auto bg-[#E5E5E5] px-6">{children}</div>
-        <FeatureSidebarRight />
+        <div className="w-[305px]">
+          <FeatureSidebarLeft />
+        </div>
+        <div className="h-full flex-grow overflow-y-auto bg-[#E5E5E5] px-6">
+          {children}
+        </div>
+        <div className="w-[108px]">
+          <FeatureSidebarRight />
+        </div>
       </div>
     );
   } else {
